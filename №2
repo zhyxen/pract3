@@ -1,0 +1,18 @@
+# Введення двох слів
+word1 = input("Введіть перше слово: ")
+word2 = input("Введіть друге слово: ")
+
+# Рядок для літер, які є тільки в одному зі слів
+unique_letters = ""
+
+# Перевіряємо літери першого слова
+for letter in word1:
+    if letter not in word2:
+        unique_letters += letter
+
+# Перевіряємо літери другого слова
+for letter in word2:
+    if letter not in word1:
+        unique_letters += letter
+
+print("Літери, які є тільки в одному з двох слів (з повтореннями):", unique_letters)
